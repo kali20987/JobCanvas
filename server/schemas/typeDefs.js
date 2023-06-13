@@ -27,11 +27,11 @@ type Query {
 type Mutation {
     addUser(firstName: String, lastName: String, gender: String, email: String, password: String)
 }
+
+type Mutation {
+    addJob(companyName: String, location: String, jobTitle: String, description: String, position: String, salary: String)
+}
 `;
-
-
-
-
 
 
 module.exports = typeDefs;
