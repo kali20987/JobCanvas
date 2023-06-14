@@ -1,56 +1,39 @@
-const mongoose = require('mongoose')
-const db = require('../config/connection').mongoURI; 
-const Job = require('../models/Job');
-const fetch = require('node-fetch');
+const Job = require("../models/Job");
+const fetch = require("node-fetch");
 
 const API_ID = '039bd7f5';
 const API_KEY= 'e3e8bbf73557a797731aaadbc6f363fb';
 
-mongoose.connect(db)
-.then(() => console.log("mongodb connection success"))
-.catch(error => console.log(error));
 
 
-async function seedJobs() {
+async function seedJobs() { 
+   let url = `http://api.adzuna.com/v1/api/jobs/gb/search/1?app_id=${API_ID}&app_key=${API_KEY}&results_per_page=50&what=javascript%20developer&content-type=application/json` ;
 
-  const response = await fetch(
-    `http://api.adzuna.com/v1/api/jobs/gb/search/1?app_id=${API_ID}&app_key=${API_KEY}&results_per_page=20&what=javascript%20developer&content-type=application/json`
-  );
-  const jsonData = await response.json();
-  const jobData = [...jsonData.results];
+   const data = await fetch(url);
 
-console.log(jobData, 'Yaya');
+   const jsonData = await data.json();
+   const jobData = jsonData.results;
 
-  const jobTableData = [];
+   console.log(jobData);
 
-  for (var x = 0; x < jobData.length; x++) {
-    const jobCompanyName = jobData[x].company;
-    const jobTitle = jobData[x].title;
-    const jobDescription = jobData[x].description;
-    const jobLocation = jobData[x].location;
-    const jobPosition = jobData[x].contract_time; 
-    const jobSalary = jobData[x].salary;
+   for (let x = 0; x < jobData.length; x++) {
+            
+      const newJobData = ({
+                 companyName: jobData[x].company.display_name,
+                  jobTitle: jobData[x].title,
+                  description: jobData[x].description,
+                 location: jobData[x].location.display_name,
+                  position: jobData[x].contract_type,
+                  salary: jobData[x].salary_max,
+            });
 
-    const job = {
-      companyName: jobCompanyName,
-      location: jobLocation,
-      jobTitle: jobTitle,
-      description: jobDescription,
-      position: jobPosition,
-      salary: jobSalary,
-   
-    };
+      console.log(newJobData);
+        
 
-    jobTableData.push(job);
-
-    console.log([jobCompanyName, jobTitle, jobLocation, jobDescription, jobPosition, jobSalary]);
-  }
+  await Job.insertMany(newJobData)    
+ }   
+};
 
 
-  await Job.bulkCreate(jobTableData);
-  console.log('Seeding completed.');
-}
 
-
-// seedJobs();
 module.exports = seedJobs;

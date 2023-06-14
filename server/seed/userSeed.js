@@ -46,6 +46,6 @@ const userData = [
     }
 ];
 
-const seedUser = () => User.bulkCreate(userData);
+const seedUser = () => User.insertMany(userData);
 
 module.exports = seedUser;

@@ -25,7 +25,7 @@ const jobSchema = new Schema({
     },
     position: {
         type: String,
-        required: true
+        required: false
 
     }, 
     salary: {
