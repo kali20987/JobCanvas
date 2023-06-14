@@ -18,20 +18,20 @@ type Job {
     description: String
     position: String
     salary: String
+    jobLister: User
 }
 
 type Query {
-    viewUsers: [Users]
+    viewUsers: [User]
+    viewJobs :[Job]
 }
 
 type Mutation {
-    addUser(firstName: String, lastName: String, gender: String, email: String, password: String)
+    addUser(firstName: String, lastName: String, gender: String, email: String, password: String): User
+
+    addJob(companyName: String, location: String, jobTitle: String,  description: String, position: String, salary: String, jobLister: ID
+     ): Job
 }
 `;
-
-
-
-
-
 
 module.exports = typeDefs;

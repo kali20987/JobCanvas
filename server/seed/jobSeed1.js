@@ -1,6 +1,6 @@
 const mongoose = require('mongoose');
-const Job = require("./models/Job");
-const db = require("./config/connection").mongoURI;
+const Job = require("../models/Job");
+const db = require("../config/connection").mongoURI;
 const fetch = require("node-fetch");
 
 const API_ID = '039bd7f5';
@@ -9,6 +9,8 @@ const API_KEY= 'e3e8bbf73557a797731aaadbc6f363fb';
 
 let jobData;
 let saveCounter = 0;
+
+function seedJobs() {
 
 mongoose.connect(db)
 .then(() => console.log("mongodb connection success"))
@@ -46,3 +48,5 @@ console.log(job);
    console.log(error);
 }
 });
+};
+module.exports = seedJobs;
