@@ -10,7 +10,7 @@ function App() {
   return (
     <div className="App">
      <NavBar/>
-      <Home/>
+      <Home/> 
       {/* <PageContainer/> */}
       {/* will delete home and navbar and use pagecontainer instead */}
     </div>
