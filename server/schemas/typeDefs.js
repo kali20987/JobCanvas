@@ -28,6 +28,10 @@ type Query {
 
 type Mutation {
     addUser(firstName: String, lastName: String, gender: String, email: String, password: String): User
+<<<<<<< HEAD
+=======
+}
+>>>>>>> 371bca1 (added user mutation)
 
     addJob(companyName: String, location: String, jobTitle: String,  description: String, position: String, salary: String, jobLister: ID
      ): Job
