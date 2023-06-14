@@ -25,12 +25,17 @@ const jobSchema = new Schema({
     },
     position: {
         type: String,
-        required: true
+        required: false
 
     }, 
     salary: {
         type: String,
         required: false
+    },
+    jobLister: {
+        type: Schema.Types.ObjectId,
+        ref: 'User',
+
     }
 });
 
