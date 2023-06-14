@@ -32,5 +32,18 @@ const handleFormSubmit = async(event) => {
     }
 };
 
+return (
+    <main className='row g-3 align-items-center'>
+        <div className='col-auto'>
+            <label for='inputPassword8'className='col-form-label'>Password:</label>
+        </div>
+        <div className='col-auto'>
+            <input type={'password'} id='inputPassword8' className='form-control' aria-aria-labelledby='passwordHelpInline'> </input>
+        </div>
+        <div className='col-auto'>
+            <span id='passwordHelpInline' className='form-text'> Must be at least 8 characters</span>
+        </div>    
+    </main>
+  );
 
 export default SignUp;
