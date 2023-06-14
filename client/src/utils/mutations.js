@@ -16,6 +16,7 @@ export const ADD_JOB = gql`
       description: $description
       position: $position
       salary: $salary
+      jobLister: $jobLister
     ) {
       companyName
       location
@@ -23,6 +24,7 @@ export const ADD_JOB = gql`
       description
       position
       salary
+      jobLister
     }
   }
 `;

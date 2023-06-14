@@ -1,7 +1,8 @@
+import React from 'react';
 import { useState } from 'react';
 
 import { useMutation } from '@apollo/client';
-import { ADD_JOB } from '../../utils/mutations';
+import { ADD_JOB } from '../utils/mutations';
 
 const JobForm = () => {
 
@@ -12,10 +13,11 @@ const JobForm = () => {
         description: '',
         position: '',
         salary: '',
+        jobLister: '',
     });
 
-    const [mutateJobs, { error }] = useMutation(ADD_JOB);
-
+    const [mutateJobs, { error, data }] = useMutation(ADD_JOB);
+console.log(data)
     const handleInput = async (e) => {
         const { companyName, value } = e.target;
         console.log(companyName);
@@ -33,9 +35,9 @@ const JobForm = () => {
                 }
             })
             window.location.reload();
-            console.log(data);
-        } catch (err) {
-            console.log(err);
+         console.log(data)
+        } catch (error) {
+            console.log(error);
         }
     }
 
@@ -91,6 +93,9 @@ const JobForm = () => {
                     value={jobInfo.salary}
                     onChange={handleInput}
                     />
+                    {error && (
+                        <div>{error.message}</div>
+                    )}
                 </div> 
                     <button type="submit" className="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Submit</button>
             </div>
