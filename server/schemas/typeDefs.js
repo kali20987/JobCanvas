@@ -32,6 +32,5 @@ type Mutation {
     addJob(companyName: String, location: String, jobTitle: String,  description: String, position: String, salary: String, jobLister: ID
      ): Job
 }
-`;
 
 module.exports = typeDefs;
