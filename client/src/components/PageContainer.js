@@ -1,9 +1,10 @@
 import React, { useState } from 'react';
 import NavBar from './NavBar';
 import Home from '../pages/Home'
-import JobPosting from '../pages/JobPosting';
-import SignUp from '../pages/SignUp';
-import LogIn from '../pages/LogIn';
+import 'bootstrap/dist/css/bootstrap.min.css';
+// import JobPosting from '../pages/JobPosting';
+// import SignUp from '../pages/SignUp';
+// import LogIn from '../pages/LogIn';
 
 // sets default landing page to home.
 
@@ -18,13 +19,13 @@ const renderPage = () => {
         return <Home />;
 
     }
-    if (currentPage === 'JobPosting') {
-        return <JobPosting />;
-    }
-    if (currentPage === 'Login') {
-        return <LogIn />
-    }
-      return <SignUp />;
+    // if (currentPage === 'JobPosting') {
+    //     return <JobPosting />;
+    // }
+    // if (currentPage === 'Login') {
+    //     return <LogIn />
+    // }
+    //   return <SignUp />;
 };
 
 const handlePageChange = (page) => setCurrentPage(page);
