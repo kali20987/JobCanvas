@@ -10,7 +10,6 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import JobPosting from "../src/pages/JobPosting";
 import "./App.css";
 import SearchBox from "./components/SearchBox";
-// import PageContainer from './components/PageContainer';
 import Home from "./pages/Home";
 import NavBar from "./components/NavBar";
 import Login from "../src/pages/LogIn";
@@ -58,4 +57,20 @@ function App() {
     </ApolloProvider>
   );
 }
+
 export default App;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
