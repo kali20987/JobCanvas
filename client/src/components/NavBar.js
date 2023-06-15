@@ -32,6 +32,9 @@ return (
     <li className="nav-item">
       <a className="nav-link" href="/">Login/SignUp</a>
     </li>
+    <li className="nav-item">
+      <a className="nav-link" href="/">Job Listings</a>
+    </li>
   </ul>
   {/* <form className="form-inline my-2 my-lg-0">
     <input className="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search"/>
