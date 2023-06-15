@@ -2,6 +2,7 @@ import React from 'react';
 import { ApolloClient, InMemoryCache, ApolloProvider, } from '@apollo/client';
 import JobPosting from '../src/pages/JobPosting';
 import './App.css';
+import SearchBox from './components/SearchBox';
 // import PageContainer from './components/PageContainer';
 import Home from './pages/Home';
 import NavBar from './components/NavBar';
@@ -18,6 +19,7 @@ return (
 <ApolloProvider client={client}>
     <div className="App">
      <NavBar/>
+     <SearchBox/>
       <Home/> 
       {/* <PageContainer/> */}
       {/* will delete home and navbar and use pagecontainer instead */}

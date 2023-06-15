@@ -7,7 +7,7 @@ const API_KEY= 'e3e8bbf73557a797731aaadbc6f363fb';
 
 
 async function seedJobs() { 
-   let url = `http://api.adzuna.com/v1/api/jobs/gb/search/1?app_id=${API_ID}&app_key=${API_KEY}&results_per_page=50&what=javascript%20developer&content-type=application/json` ;
+   let url = `https://api.adzuna.com/v1/api/jobs/us/search/1?app_id=${API_ID}&app_key=${API_KEY}&results_per_page=50&where=Georgia` ;
 
    const data = await fetch(url);
 
