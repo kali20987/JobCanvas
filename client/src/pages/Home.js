@@ -83,7 +83,7 @@ export default function Home() {
     </section>
 
     <section className="newsUpdates">
-      <sectionb className="content">
+      <section className="content">
         <div className="container">
           <h3>Latest news</h3>
           <p className="lead">With our powers combined, we came togther to deliver this JobCanvas website. Thank you to all the Group Members!</p>
@@ -126,7 +126,7 @@ export default function Home() {
             
           </div>
         </div>
-      </sectionb>
+      </section>
     </section>
 
  
