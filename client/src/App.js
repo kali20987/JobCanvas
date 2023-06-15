@@ -7,6 +7,7 @@ import SearchBox from './components/SearchBox';
 import Home from './pages/Home';
 import NavBar from './components/NavBar';
 import Login from '../src/pages/LogIn';
+import Signup from './pages/SignUp';
 
 const client = new ApolloClient({
 uri: 'http://localhost:3001/graphql',
@@ -27,6 +28,7 @@ return (
 <div className="container mx-auto">
 <JobPosting />
 <Login />
+<Signup/>
 </div>
 </ApolloProvider>
 );
