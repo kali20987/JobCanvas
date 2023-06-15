@@ -2,11 +2,11 @@ import React from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import { ApolloClient, InMemoryCache, ApolloProvider } from '@apollo/client';
 import './App.css';
-import Home from './pages/Home';
+import Home from '../src/pages/Home';
 import Login from './pages/Login';
 // import SignUp from './pages/SignUp';
 import JobPosting from '../src/pages/JobPosting';
-import NavBar from './components/NavBar';
+import NavBar from '../src/components/NavBar';
 
 const client = new ApolloClient({
   uri: 'http://localhost:3001/graphql',
