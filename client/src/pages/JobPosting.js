@@ -50,7 +50,7 @@ console.log(data)
                     <label className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Company: </label>
                     <input type="text" id="companyName" className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Company Name" 
                     name="companyName"
-                    value={jobInfo.companyName}
+                 
                     onChange={handleInput}
                     required />
                 </div>
@@ -58,7 +58,7 @@ console.log(data)
                     <label className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Location: </label>
                     <input type="text" id="location" className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Job Location" 
                     name="location"
-                    value={jobInfo.location}
+                   
                     onChange={handleInput}
                     required />
                 </div>  
@@ -66,7 +66,7 @@ console.log(data)
                     <label className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Title: </label>
                     <input type="text" id="jobtitle" className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Job Title" 
                     name="jobtitle"
-                    value={jobInfo.jobtitle}
+                 
                     onChange={handleInput}
                     required />
                 </div>
@@ -74,7 +74,7 @@ console.log(data)
                     <label className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Description: </label>
                     <input type="text" id="description" className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Job Description" 
                     name="description"
-                    value={jobInfo.description}
+               
                     onChange={handleInput}
                     required />
                 </div>
@@ -82,7 +82,7 @@ console.log(data)
                     <label className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Position: </label>
                     <input type="text" id="position" className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Job Position" 
                     name="position"
-                    value={jobInfo.position}
+                    
                     onChange={handleInput}
                     required />
                 </div>
@@ -90,7 +90,7 @@ console.log(data)
                     <label className="mb-2 text-sm font-medium text-gray-900 dark:text-white">Salary: </label>
                     <input type="text" id="salary" className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Job Salary" 
                     name="salary"
-                    value={jobInfo.salary}
+                   
                     onChange={handleInput}
                     />
                     {error && (

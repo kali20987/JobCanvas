@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import NavBar from './NavBar';
 import Home from '../pages/Home'
+
 import 'bootstrap/dist/css/bootstrap.min.css';
 // import JobPosting from '../pages/JobPosting';
 // import SignUp from '../pages/SignUp';
@@ -33,6 +34,7 @@ const handlePageChange = (page) => setCurrentPage(page);
  return (
     <div>
         <NavBar currentPage={currentPage} handlePageChange={handlePageChange} />
+     
 
         {renderPage()}
     </div>
