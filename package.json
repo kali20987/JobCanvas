@@ -19,6 +19,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "bcrypt": "^5.1.0",
     "concurrently": "^8.2.0",
     "nodemon": "^2.0.22",
     "nvm": "^0.0.4"
