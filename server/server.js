@@ -2,7 +2,7 @@ const express = require("express");
 const path = require("path");
 // Apollo-server-express (deprecates in Oct 2023 to @apollo/server. Keep in mind!)
 const { ApolloServer } = require("apollo-server-express");
-
+// const { authMiddleware } = require("./utils/auth");
 const { typeDefs, resolvers } = require("./schemas");
 
 // mongoose connector
@@ -13,7 +13,8 @@ const PORT = process.env.PORT || 3001;
 // Instantiate new Apolloserver
 const apolloServer = new ApolloServer({
   typeDefs,
-  resolvers,
+  resolvers, 
+  // context: authMiddleware,
 });
 
 // Express
