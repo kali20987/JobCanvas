@@ -17,8 +17,8 @@ const resolvers = {
         addUser: async (_, args) => {
             const user = await User.create(args);
             const token = signToken(user);
-            return user;
-            // return { token, user };
+            // return user;
+            return { token, user };
         },
 
         addJob: async (_, args) => {
