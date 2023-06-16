@@ -142,7 +142,7 @@ const [companyName, location, jobTitle, description, position, salary ] = useSta
         <div class="card" 
         id="userInput">
             <div class="container">
-                <p>{paragraph}</p>
+                <pre>{paragraph.join('\n')}</pre>
             
         </div>
         </div>
