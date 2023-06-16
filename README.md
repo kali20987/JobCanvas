@@ -16,11 +16,11 @@ Each posted job listing is saved to a MongoDB database along with each user who 
 
   # Credits
 
-  Shamary Edwards
-  Daisha Drayton
-  Madison Walker
-  Khadijah Ali
-  Victor Harris
+  * Shamary Edwards
+  * Daisha Drayton
+  * Madison Walker
+  * Khadijah Ali
+  * Victor Harris
 
    # License 
   The MIT License
