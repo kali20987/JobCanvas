@@ -1,0 +1,6 @@
+<svg version="1.1"
+             width="40" height="30"
+             xmlns="http://www.w3.org/2000/svg">
+        <circle cx="25" cy="20" r="20" fill="Green" stroke="black" stroke-width="2"/>
+          <text x="25" y="25" font-size="18" text-anchor="middle" fill="White">JC</text>
+        </svg>

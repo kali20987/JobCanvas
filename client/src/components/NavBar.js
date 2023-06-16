@@ -1,12 +1,12 @@
 import React from "react";
 import { Link } from "react-router-dom";
-
+import MiniLogo from "../images/minilogo.svg"
 
 export default function Navbar() {
 
   return (
     <nav className="navbar navbar-expand-lg navbar-dark bg-dark" id="nav-main">
-      <Link className="navbar-brand" to="/">Our Logo</Link>
+      <Link className="navbar-brand" to="/"><img src={MiniLogo} alt="..."/></Link>
       <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span className="navbar-toggler-icon"></span>
       </button>
