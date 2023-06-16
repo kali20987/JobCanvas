@@ -1,24 +1,8 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-// import { useState } from 'react'
 
 export default function Navbar() {
-
-  // const [searchInput, setSearchInput] = useState()
-
-  // const API_ID = '039bd7f5';
-  // const API_KEY = 'e3e8bbf73557a797731aaadbc6f363fb';
-  
-  
-  // async function jobSearch(input) {
-  //   const data = await fetch(
-  //     `https://api.adzuna.com/v1/api/jobs/us/search/1?app_id=${API_ID}&app_key=${API_KEY}&results_per_page=50&title_only=${searchInput}`
-  //   );
-  //   const jsonData = await data.json();
-  //   const jobData = jsonData.results;
-  //   console.log(jobData);
-  // }
 
   return (
     <nav className="navbar navbar-expand-lg navbar-dark bg-dark" id="nav-main">
@@ -43,15 +27,6 @@ export default function Navbar() {
           </li>
         </ul>
 
-        {/* <div className="search-container">
-              
-             <input 
-              id="input" type="text" className="input" placeholder="Search..."
-              onChange={(event) => setSearchInput(event.target.value)}
-              />
-              <button id="searchBtn" className="searchBtn" onClick={jobSearch} >Search</button>
-          
-        </div> */}
 
       </div>
     </nav>
