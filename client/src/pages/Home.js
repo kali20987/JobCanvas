@@ -1,28 +1,46 @@
 import React from 'react'
+import { useState } from 'react'
 import planChalkboard from '../images/planChalkboard.jpeg'
 import officeCubes from '../images/officeCubes.jpeg'
 import programPic from '../images/program.png'
 import typeLaptop from '../images/typeLaptop.jpeg'
 import together from '../images/together.jpeg'
-
 import 'bootstrap/dist/css/bootstrap.min.css';
 
-//temp (restructure after done inputting bootstrap inputs)
-// import {Button, Container, Row, Col} from 'react-bootstrap';
+
 
 export default function Home() {
+
+  const [searchInput, setSearchInput] = useState()
+
+  const API_ID = '039bd7f5';
+  const API_KEY = 'e3e8bbf73557a797731aaadbc6f363fb';
+  
+  
+  async function jobSearch(input) {
+    const data = await fetch(
+      `https://api.adzuna.com/v1/api/jobs/us/search/1?app_id=${API_ID}&app_key=${API_KEY}&results_per_page=50&title_only=${searchInput}`
+    );
+    const jsonData = await data.json();
+    const jobData = jsonData.results;
+    console.log(jobData);
+  }
+
     return (
         <div className='home p-3 mb-2 bg-light text-dark'>
-            <div className="container">
+
+        <div className="search-container p-3">
+              <input 
+               id="input" type="text" className="input" placeholder="Search..."
+               onChange={(event) => setSearchInput(event.target.value)}
+               />
+               <button id="searchBtn" className="searchBtn" onClick={jobSearch} >Search</button>
+         </div>
+
+            <div className="container p-3">
             <h1>JobCanvas</h1>
            
-
-          
-  
-
- 
-
-    <section className="whatWereAbout">
+     <section className="whatWereAbout">
       <div className="section-content">
         <div className="container">
           <h5>What we are all about</h5>
@@ -107,10 +125,7 @@ export default function Home() {
                     </div>
                   </div>
               
-               
-                
-                  
-                 
+
                   <div className="card-columns bg-secondary">
                   <img className="img-fluid img-thumbnail" src={together} alt="Typing on laptop."/>
                     <div className="card-body">
@@ -121,15 +136,14 @@ export default function Home() {
                   </div>
                 </div>
                 <br/>
-                
-
-            
+          
           </div>
         </div>
       </section>
     </section>
 
  
+              
             </div>
         </div>
     )
