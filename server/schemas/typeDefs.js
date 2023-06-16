@@ -18,7 +18,7 @@ type Job {
     description: String
     position: String
     salary: String
-    jobLister: User
+   
 }
 type Auth {
     token: ID
