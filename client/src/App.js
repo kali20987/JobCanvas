@@ -7,7 +7,7 @@ import {
 } from "@apollo/client";
 import { setContext } from "@apollo/client/link/context";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import JobPosting from "../src/pages/JobPosting";
+import JobPosting from "./pages/JobPosting";
 import "./App.css";
 import SearchBox from "./components/SearchBox";
 import Home from "./pages/Home";
@@ -50,7 +50,7 @@ function App() {
             <Route path="/" element={<Home />} />
             <Route path="/login" element={<Login />} />
             <Route path="/signup" element={<Signup />} />
-            <Route path="/jobs" element={<JobPosting />} />
+            <Route path="/job-posting" element={<JobPosting />} />
           </Routes>
         </div>
       </Router>
