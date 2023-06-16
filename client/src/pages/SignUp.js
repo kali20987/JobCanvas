@@ -17,6 +17,8 @@ const SignUp = () => {
       ...formState,
       [name]: value,
     });
+    console.log(error);
+    console.log(data);
   };
 
   const handleFormSubmit = async (event) => {
@@ -35,6 +37,7 @@ const SignUp = () => {
       });
     } catch (e) {
       console.error(e);
+      
     }
   };
 
