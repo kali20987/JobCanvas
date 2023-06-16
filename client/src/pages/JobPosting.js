@@ -33,7 +33,7 @@ const JobForm = () => {
                     ...jobInfo
                 }
             })
-            alert("job posted");
+            alert("job posted!");
          console.log(data)
         } catch (error) {
             console.log(error);
