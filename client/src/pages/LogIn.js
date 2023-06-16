@@ -1,8 +1,12 @@
 import React, { useState } from 'react';
 import { useMutation } from '@apollo/client';
+import { useNavigate } from 'react-router-dom';
 import { LOGIN_USER } from "../utils/mutations";
+import LoginForm from "../components/LoginForm";
 
-const LogIn = () => {
+const Login = () => {
+  const navigate = useNavigate();
+
   const [formState, setFormState] = useState({
     email: '',
     password: '',
@@ -17,16 +21,30 @@ const LogIn = () => {
         variables: { ...formState },
       });
       // Handle the login response
+      // Redirect to the home page
+      navigate('/');
     } catch (e) {
       console.error(e);
     }
   };
 
+  const handleInputChange = (event) => {
+    const { name, value } = event.target;
+    setFormState({ ...formState, [name]: value });
+  };
+
   return (
-    <form onSubmit={handleFormSubmit}>
-      {/* Your login form JSX */}
-    </form>
+    <div>
+      <h2>Login</h2>
+      <form onSubmit={handleFormSubmit}>
+        <LoginForm
+          formState={formState}
+          handleInputChange={handleInputChange}
+        />
+      </form>
+    </div>
   );
 };
 
-export default LogIn;
+export default Login;
+

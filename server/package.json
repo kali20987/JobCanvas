@@ -7,7 +7,11 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node server.js",
     "seeds": "node seed/index.js",
+<<<<<<< HEAD
     "watch": "nodemon"
+=======
+    "watch":"nodemon server.js"
+>>>>>>> 11d2e7b566cd71a62db9b577345c1b6e5fb3260e
   },
   "keywords": [],
   "author": "",
@@ -18,9 +22,13 @@
     "express": "^4.18.2",
     "graphql": "^16.6.0",
     "jsonwebtoken": "^9.0.0",
+<<<<<<< HEAD
     "mongoose": "^7.2.4"
   },
   "devDependencies": {
+=======
+    "mongoose": "^7.2.4",
+>>>>>>> 11d2e7b566cd71a62db9b577345c1b6e5fb3260e
     "nodemon": "^2.0.22"
   }
 }
