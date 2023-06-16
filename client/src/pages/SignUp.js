@@ -127,6 +127,7 @@ const SignUp = () => {
           className="btn btn-block btn-primary"
           style={{ cursor: "pointer" }}
           type="submit"
+          onSubmit={handleFormSubmit}
         >
           Submit
         </button>

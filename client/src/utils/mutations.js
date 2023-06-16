@@ -29,34 +29,21 @@ export const ADD_JOB = gql`
 
 //MADISON
 export const ADD_USER = gql`
-  mutation addUser(
-    $firstName: String
-    $lastName: String
-    $gender: String
-    $email: String
-    $password: String
-  ) {
-    addUser(
-      firstName: $firstName
-      lastName: $lastName
-      gender: $gender
-      email: $email
-      password: $password
-    ) {
-      _id
-      firstName
-      lastName
-      gender
-      email
+mutation addUser($firstName: String, $lastName: String, $gender: String, $email: String, $password: String) {
+  addUser(firstName: $firstName, lastName: $lastName, gender: $gender, email: $email, password: $password) {
+    token
+    user 
+      
     }
   }
+}
 `;
 
 export const LOGIN_USER = gql`
-mutation Login($email: String!, $password: String!) {
-  login(email: $email, password: $password) {
-    email
-    password
+  mutation Login($email: String!, $password: String!) {
+    login(email: $email, password: $password) {
+      email
+      password
+    }
   }
-}
 `;
