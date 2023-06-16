@@ -2,17 +2,18 @@ import React, { useState } from 'react';
 
 const styles = {
   jobBoxStyle: { 
-  width:'950px',
-  height:'400px', 
-  lineHeight:'3em',
+   lineHeight:'3em',
   overflow:'scroll', 
   padding:'5px', 
   },
   jobItemStyle: {
-    border: '2px solid',
-    borderRadius: '5px',
-    margin:'0px',
-    padding: '10px'
+    border: '2px opaque gold',
+    borderRadius: '10px',
+    margin:'10px',
+    padding: '10px',
+  },
+  pTagStyle: {
+    fontSize: '10px',
   }
 }
 
@@ -20,8 +21,8 @@ export default function SearchBox() {
   const [searchInput, setSearchInput] = useState('');
   const [jobData, setJobData] = useState([]);
 
-  const API_ID = '039bd6f5';
-  const API_KEY = '380d382ccd7b1ed9a74925367df76ea0';
+  const API_ID = '9c19e01b';
+  const API_KEY = '23a78db7bd3b02d0557a067cf16e5f1e';
 
   async function jobSearch(input) {
     const data = await fetch(
@@ -33,6 +34,8 @@ export default function SearchBox() {
 
     const jsonData = await data.json();
     const jobs = jsonData.results;
+    console.log(jobs);
+    
     setJobData(jobs);
   }
 
@@ -53,14 +56,14 @@ export default function SearchBox() {
         <h3>Search Result:</h3>
         {jobData.map((job, index) => (
 
-          <div className="job-item" key={index}  >
+          <div className="job-item" key={index} style={styles.jobItemStyle} >
 
-            <h5>{job.company.display_name}</h5>
-            <p>{job.title}</p>
-            <p>{job.description}</p>
-            <p>{job.location.display_name}</p>
-            <p>{job.contract_type}</p>
-            <p>{job.salary}</p>
+            <h6>{job.company.display_name}</h6>
+            <p style={styles.pTagStyle}>{job.title}</p>
+            <p style={styles.pTagStyle}>{job.description}</p>
+            <p style={styles.pTagStyle}>{job.location.display_name}</p>
+            <p style={styles.pTagStyle}>{job.contract_time}</p>
+            <p style={styles.pTagStyle}>$ { job.salary_max}</p>
 
           </div>
 
