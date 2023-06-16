@@ -20,7 +20,6 @@
   "license": "ISC",
   "dependencies": {
     "concurrently": "^8.2.0",
-    "nodemon": "^2.0.22",
     "nvm": "^0.0.4"
   }
 }

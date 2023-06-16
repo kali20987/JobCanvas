@@ -17,7 +17,6 @@ const JobForm = () => {
     });
 
     const [mutateJobs, { error, data }] = useMutation(ADD_JOB);
-//console.log(data)
     const handleInput = async (e) => {
         const { name, value } = e.target;
         console.log(name);
@@ -34,32 +33,12 @@ const JobForm = () => {
                     ...jobInfo
                 }
             })
-            // window.location.reload();
             alert("job posted");
          console.log(data)
         } catch (error) {
             console.log(error);
         }
     }
-
-    // const postJobHandler = async (btn) => {
-    //     const jobId = btn.id.split('_')[1];
-    //     let companybox = document.getElementById("submitBtn").value;
-    //     if (companybox) {
-    //         const response = await fetch(data, {
-    //             method: "POST",
-    //             body: JSON.stringify({ jobId, companybox, }),
-    //             headers: { "Content-Type": "application/json" }, 
-    //     });
-
-    //     if (response.ok) {
-    //         alert("Job posted");
-    //         const get = await response.json();
-    //     } else {
-    //         alert("Failed to post job")
-    //     }
-    //     }
-    // }
 
 const [companyName, location, jobTitle, description, position, salary ] = useState('');
 
@@ -124,24 +103,6 @@ const [companyName, location, jobTitle, description, position, salary ] = useSta
             >
               Submit
             </button>
-            {/* <button
-                onClick={() =>
-                ({
-                  type: ADD_JOB,
-                  cats: {
-                    name: companyName,
-                    location: location,
-                    title: jobTitle,
-                    description: description,
-                    position: position,
-                    salary: salary,
-                  },
-                })
-              }
-            >
-              Submit
-            </button> */}
-                    {/* <button type="submit" id="submitBtn" className="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Submit</button> */}
             </div>
             </form>
         </div>
