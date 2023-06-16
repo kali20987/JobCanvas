@@ -9,7 +9,7 @@ import { setContext } from "@apollo/client/link/context";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import JobPosting from "../src/pages/JobPosting";
 import "./App.css";
-import SearchBox from "./components/SearchBox";
+// import SearchBox from "./components/SearchBox";
 import Home from "./pages/Home";
 import NavBar from "./components/NavBar";
 import Login from "../src/pages/LogIn";
@@ -45,7 +45,7 @@ function App() {
       <Router>
           <NavBar />
         <div className="container mx-auto">
-          <SearchBox />
+          {/* <SearchBox /> */}
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/login" element={<Login />} />

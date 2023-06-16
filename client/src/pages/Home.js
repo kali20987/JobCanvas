@@ -4,11 +4,8 @@ import officeCubes from '../images/officeCubes.jpeg'
 import programPic from '../images/program.png'
 import typeLaptop from '../images/typeLaptop.jpeg'
 import together from '../images/together.jpeg'
-
 import 'bootstrap/dist/css/bootstrap.min.css';
 
-//temp (restructure after done inputting bootstrap inputs)
-// import {Button, Container, Row, Col} from 'react-bootstrap';
 
 export default function Home() {
     return (
@@ -17,12 +14,7 @@ export default function Home() {
             <h1>JobCanvas</h1>
            
 
-          
-  
-
- 
-
-    <section className="whatWereAbout">
+     <section className="whatWereAbout">
       <div className="section-content">
         <div className="container">
           <h5>What we are all about</h5>
@@ -107,10 +99,7 @@ export default function Home() {
                     </div>
                   </div>
               
-               
-                
-                  
-                 
+
                   <div className="card-columns bg-secondary">
                   <img className="img-fluid img-thumbnail" src={together} alt="Typing on laptop."/>
                     <div className="card-body">
@@ -121,9 +110,7 @@ export default function Home() {
                   </div>
                 </div>
                 <br/>
-                
-
-            
+          
           </div>
         </div>
       </section>
