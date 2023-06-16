@@ -1,8 +1,9 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { useState } from 'react';
 
-import { useMutation } from '@apollo/client';
+import { useMutation, useQuery } from '@apollo/client';
 import { ADD_JOB } from '../utils/mutations';
+import { QUERY_VIEWJOBS } from '../utils/queries';
 
 const JobForm = () => {
 
@@ -32,13 +33,41 @@ const JobForm = () => {
                 variables: {
                     ...jobInfo
                 }
-            })
-            alert("job posted!");
-         console.log(data)
-        } catch (error) {
-            console.log(error);
+            });
+        } catch (err) {
+          console.error(err);
         }
+        setJobInfo({
+            companyName: '',
+            location: '',
+            jobTitle: '',
+            description: '',
+            position: '',
+            salary: '',
+        });
+
     }
+
+    const [paragraph, setParagraph ] = useState([]);
+    const displayData = () => {
+    const company = `${jobInfo.companyName}`
+    const locationInput = `${jobInfo.location}`
+    const titleInput = `${jobInfo.jobTitle}`
+    const descriptionInput = `${jobInfo.description}`
+    const positionInput = `${jobInfo.position}`
+    const salaryInput = `${jobInfo.salary}`
+    const newParagraph = `${company}\n${locationInput}\n${titleInput}\n${descriptionInput}\n${positionInput}\n${salaryInput}`;
+    setParagraph([...paragraph, newParagraph]);
+    // setParagraph ([...paragraph, 
+    //     company+\n, 
+    //     locationInput, 
+    //     titleInput, 
+    //     descriptionInput, 
+    //     positionInput, 
+    //     salaryInput])
+}
+
+    
 
 const [companyName, location, jobTitle, description, position, salary ] = useState('');
 
@@ -98,7 +127,11 @@ const [companyName, location, jobTitle, description, position, salary ] = useSta
                         <div>{error.message}</div>
                     )}
                 </div> 
-                <button
+                <button 
+                onClick={
+                    displayData
+                }
+                id = "submitBtn"
                 type= "submit"
             >
               Submit
@@ -106,8 +139,16 @@ const [companyName, location, jobTitle, description, position, salary ] = useSta
             </div>
             </form>
         </div>
+        <div class="card" 
+        id="userInput">
+            <div class="container">
+                <p>{paragraph}</p>
+            
+        </div>
+        </div>
     </section>
     );
 };
+
 
 export default JobForm;
