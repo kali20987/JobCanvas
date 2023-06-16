@@ -1,8 +1,8 @@
 const Job = require("../models/Job");
 const fetch = require("node-fetch");
 
-const API_ID = '039bd7f5';
-const API_KEY= '34ae4538a87261a8a078a92d0c73a928';
+const API_ID = '9c19e01b';
+const API_KEY= '23a78db7bd3b02d0557a067cf16e5f1e';
 
 
 
