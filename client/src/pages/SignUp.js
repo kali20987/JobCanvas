@@ -27,6 +27,7 @@ const SignUp = () => {
       const { data } = addUser({
         variables: { ...formState },
       });
+      console.log(data);
       // Clear the form inputs
       setFormState({
         firstName: "",
@@ -125,6 +126,7 @@ const SignUp = () => {
             name="password"
             value={formState.password}
             onChange={handleChange}
+            // eslint-disable-next-line
             aria-aria-labelledby="passwordHelpInline"
           ></input>
         </div>
