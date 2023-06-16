@@ -25,6 +25,14 @@ const SignUp = () => {
       const { data } = addUser({
         variables: { ...formState },
       });
+      // Clear the form inputs
+      setFormState({
+        firstName: "",
+        lastName: "",
+        gender: "",
+        email: "",
+        password: "",
+      });
     } catch (e) {
       console.error(e);
     }

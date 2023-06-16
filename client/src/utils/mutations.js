@@ -34,7 +34,6 @@ mutation addUser($firstName: String, $lastName: String, $gender: String, $email:
     token
     user 
       
-    }
   }
 }
 `;
