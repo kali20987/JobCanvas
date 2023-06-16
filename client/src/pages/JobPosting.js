@@ -24,7 +24,7 @@ const JobForm = () => {
         console.log(value);
         console.log("did the state change?", jobInfo)
         setJobInfo({...jobInfo, [name]: value});
-    }
+    } 
 
     const handleFormSubmit = async (e) => {
         e.preventDefault();
