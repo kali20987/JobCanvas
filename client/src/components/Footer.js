@@ -1,11 +1,12 @@
 import React from "react";
+import "./Footer.css";
 
 const Footer = () => {
   return (
-    <footer className="navbar navbar-expand-lg bg-body-tertiary">
-      <div className="container">
-        <a className="navbar-brand text-white" href="#">
-        ©2023 Job Canvas. All rights reserved. 
+    <footer className="footer">
+      <div className="container text-white">
+        <a className="navbar-brand" href="#">
+          ©2023 Job Canvas. All rights reserved.
         </a>
       </div>
     </footer>
