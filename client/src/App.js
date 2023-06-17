@@ -14,6 +14,8 @@ import Home from "./pages/Home";
 import NavBar from "./components/NavBar";
 import Login from "../src/pages/LogIn";
 import Signup from "./pages/SignUp";
+import '../src/components/fonts.css';
+
 
 // Construct our main GraphQL API endpoint
 const httpLink = createHttpLink({

@@ -35,7 +35,7 @@ const Login = () => {
 
   return (
     <div>
-      <h2>Login</h2>
+   {/* <h2 style={{ color: 'green' }}>Login</h2> */}
       <form onSubmit={handleFormSubmit}>
         <LoginForm
           formState={formState}

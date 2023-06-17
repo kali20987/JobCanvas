@@ -17,6 +17,8 @@ const SignUp = () => {
       ...formState,
       [name]: value,
     });
+    console.log(error);
+    console.log(data);
   };
 
   const handleFormSubmit = async (event) => {
@@ -25,8 +27,18 @@ const SignUp = () => {
       const { data } = addUser({
         variables: { ...formState },
       });
+      console.log(data);
+      // Clear the form inputs
+      setFormState({
+        firstName: "",
+        lastName: "",
+        gender: "",
+        email: "",
+        password: "",
+      });
     } catch (e) {
       console.error(e);
+      
     }
   };
 
@@ -37,7 +49,7 @@ const SignUp = () => {
         {/* First Name */}
         <div className="col-auto">
           <label for="exampleFormControlInput1" className="form-label">
-            First Name
+            First Name:
           </label>
           <input
             type={"text"}
@@ -64,10 +76,31 @@ const SignUp = () => {
             onChange={handleChange}
           ></input>
         </div>
+        {/* Gender */}
+        <div className="col-auto">
+          <label for="exampleFormControlInput1" className="form-label">
+            Gender:
+          </label>
+          <select
+            type="list"
+            className="form-select"
+            id="inputGender"
+            name="gender"
+            value={formState.gender}
+            onChange={handleChange}
+          >
+            <option selected>Choose a gender</option>
+            <option value="1">Male</option>
+            <option value="2">Female</option>
+            <option value="3">Trans</option>
+            <option value="4">Non-Binary</option>
+            <option value="5">Other</option>
+          </select>
+        </div>
         {/* Email Input */}
         <div className="col-auto">
           <label for="exampleFormControlInput1" className="form-label">
-            Email address
+            Email address:
           </label>
           <input
             type="text"
@@ -93,6 +126,7 @@ const SignUp = () => {
             name="password"
             value={formState.password}
             onChange={handleChange}
+            // eslint-disable-next-line
             aria-aria-labelledby="passwordHelpInline"
           ></input>
         </div>
@@ -106,6 +140,7 @@ const SignUp = () => {
           className="btn btn-block btn-primary"
           style={{ cursor: "pointer" }}
           type="submit"
+          onSubmit={handleFormSubmit}
         >
           Submit
         </button>
