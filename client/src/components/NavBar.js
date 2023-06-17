@@ -1,13 +1,11 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import "../components/NavBar.css";
-import MiniLogo from "../images/minilogo.svg"
 
 export default function Navbar() {
   return (
-
     <nav className="navbar navbar-expand-lg navbar-dark nunito-sans-font" id="nav-main">
-      <Link className="navbar-brand" to="/"><img src={MiniLogo} alt="..."/></Link>
+      <Link className="navbar-brand" to="/">Job Canvas</Link>
       <button
         className="navbar-toggler"
         type="button"
