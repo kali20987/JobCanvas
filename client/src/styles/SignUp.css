@@ -1,0 +1,44 @@
+.signup-page {
+    background-image: url("../images/another.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: flex-start; 
+    align-items: center;
+  }
+  
+  
+  
+  .form-group {
+    margin-bottom: 20px;
+  }
+  
+  .form-control {
+    width: 300px;
+    max-width: 100%;
+    font-family: "Nunito Sans", sans-serif;
+  }
+  
+  .form-label {
+    font-size: 14px;
+    text-align: right;
+  }
+  
+  .btn-primary {
+    background-color: rgb(70, 80, 200);
+    color: rgb(241, 241, 245);
+  }
+  .form-container {
+    width: 300px;
+    margin-right: 0;
+  }
+  
+  
+  .form-wrapper {
+    display: flex;
+    justify-content: flex-start;
+  }
+  

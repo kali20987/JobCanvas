@@ -1,6 +1,9 @@
 import React, { useState } from "react";
 import { useMutation } from "@apollo/client";
 import { ADD_USER } from "../utils/mutations";
+import "../styles/SignUp.css";
+
+
 
 const SignUp = () => {
   const [formState, setFormState] = useState({

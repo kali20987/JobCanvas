@@ -8,14 +8,13 @@ import {
 import { setContext } from "@apollo/client/link/context";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import JobPosting from "./pages/JobPosting";
-import "./App.css";
-// import SearchBox from "./components/SearchBox";
+import "./styles/App.css";
 import Home from "./pages/Home";
 import NavBar from "./components/NavBar";
+import Footer from "./components/Footer";
 import Login from "../src/pages/LogIn";
 import Signup from "./pages/SignUp";
-import '../src/components/fonts.css';
-
+import './styles/fonts.css';
 
 // Construct our main GraphQL API endpoint
 const httpLink = createHttpLink({
@@ -45,9 +44,8 @@ function App() {
   return (
     <ApolloProvider client={client}>
       <Router>
-          <NavBar />
+        <NavBar />
         <div className="container mx-auto">
-          {/* <SearchBox /> */}
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/login" element={<Login />} />
@@ -55,23 +53,13 @@ function App() {
             <Route path="/jobposting" element={<JobPosting />} />
           </Routes>
         </div>
+        <Footer />
       </Router>
     </ApolloProvider>
   );
 }
 
 export default App;
-
-
-
-
-
-
-
-
-
-
-
 
 
 
