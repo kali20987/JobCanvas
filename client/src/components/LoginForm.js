@@ -1,5 +1,5 @@
 import React from 'react';
-import '../components/LoginForm.css';
+import '../styles/LoginForm.css';
 
 export default function LoginForm({ formState, handleInputChange }) {
   return (
