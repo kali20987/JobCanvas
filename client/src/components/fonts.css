@@ -1,0 +1,13 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;400;600;700;800;900&family=Permanent+Marker&family=Rubik:wght@500&display=swap');
+/* fonts.css */
+.nunito-sans-font {
+  font-family: 'Nunito Sans', sans-serif;
+}
+
+.permanent-marker-font {
+  font-family: 'Permanent Marker', cursive;
+}
+
+.rubik-font {
+  font-family: 'Rubik', sans-serif;
+}
