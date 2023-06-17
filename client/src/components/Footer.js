@@ -5,7 +5,7 @@ const Footer = () => {
   return (
     <footer className="footer">
       <div className="container text-white">
-        <a className="navbar-brand" href="#">
+        <a className="navbar-brand" href="/">
           ©2023 Job Canvas. All rights reserved.
         </a>
       </div>
