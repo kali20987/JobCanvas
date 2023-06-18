@@ -1,12 +1,12 @@
-import React from 'react'
-import planChalkboard from '../images/planChalkboard.jpeg'
-import officeCubes from '../images/officeCubes.jpeg'
-import programPic from '../images/program.png'
-import typeLaptop from '../images/typeLaptop.jpeg'
-import together from '../images/together.jpeg'
+import React from 'react';
+import planChalkboard from '../images/planChalkboard.jpeg';
+import officeCubes from '../images/officeCubes.jpeg';
+import programPic from '../images/program.png';
+import typeLaptop from '../images/typeLaptop.jpeg';
+import together from '../images/together.jpeg';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import SearchBox from '../components/SearchBox';
-
+import '../styles/Home.css';
 
 export default function Home() {
 
@@ -16,10 +16,10 @@ export default function Home() {
    
     <SearchBox />
 
-      <div className="container p-3">
+      <div className="container-submmain p-3">
         <h1>JobCanvas</h1>
 
-        <section className="whatWereAbout">
+        <section className="section1">
           <div className="section-content">
             <div className="container">
               <h5>What we are all about</h5>
