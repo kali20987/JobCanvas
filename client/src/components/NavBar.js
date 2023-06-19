@@ -2,6 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import "../styles/NavBar.css";
 import MiniLogo from '../images/minilogo.svg'
+// import JCLogo from '../images/jobcanvasjc.png'
 
 export default function Navbar() {
   return (
