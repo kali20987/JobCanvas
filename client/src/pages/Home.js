@@ -1,13 +1,12 @@
 import React from 'react';
-import planChalkboard from '../images/planChalkboard.jpeg';
-import officeCubes from '../images/officeCubes.jpeg';
 import programPic from '../images/program.png';
-import typeLaptop from '../images/typeLaptop.jpeg';
-import together from '../images/together.jpeg';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import SearchBox from '../components/SearchBox';
 import '../styles/Home.css';
 import groupPhoto from '../images/group_720.jpg';
+import nurse from '../images/nurse_720.jpg';
+import groupOffice from '../images/groupoffice.jpg';
+
 
 export default function Home() {
 
@@ -40,12 +39,12 @@ export default function Home() {
 
                       </div>
                     </div>
-                    <div className="card p-3 mb-2 bg-warning text-dark">
+                    <div className="card p-3 mb-2 text-dark">
                       <div className="card-block ">
                         <h4 className="card-title">Creative &amp; Design</h4>
                         <h6 className="card-subtitle">Think outside the cubicle.</h6>
                       </div>
-                      <img src={officeCubes} alt="Working on a laptop." />
+                      <img src={nurse} alt="Working on a laptop." />
                       <div className="card-block">
                         <p className="card-text">Free your creativity. Do not let fear hamper what greatness may lay ahead of you.</p>
 
@@ -90,27 +89,21 @@ export default function Home() {
 
 
                 <div className="card-columns">
-                  <div className="card-3">
-                    <img className="card-img-top" src={typeLaptop} alt="Typing on laptop." />
+                  <div className="card-3 ">
+                    
                     <div className="card-body">
-                      <h4 className="card-title text-white">Committed</h4>
-                      <p className="card-text text-white">We want to be just as committed as you are in starting a beautiful future.</p>
+                      <h4 className="card-title">Committed</h4>
+                      <p className="card-text">We want to be just as committed as you are in starting a beautiful future.</p>
                     </div>
                   </div>
-                  {/* <div className="card p-3">
+                
+
+
+                  <div className="card-columns">
+                    <img className="img-fluid img-thumbnail" src={groupOffice} alt="Hands together in circle." />
                     <div className="card-body">
-                      <h4 className="card-title">Card title</h4>
-                      <p className="card-text">We can delete these extra cards if we dont need them. </p>
-
-                    </div>
-                  </div> */}
-
-
-                  <div className="card-columns bg-warning">
-                    <img className="img-fluid img-thumbnail" src={together} alt="Hands together in circle." />
-                    <div className="card-body">
-                      <h4 className="card-title text-white">TOGETHER</h4>
-                      <p className="card-text text-white">Together we can forge ahead and make a greater future a reality.</p>
+                      <h4 className="card-title">TOGETHER</h4>
+                      <p className="card-text ">Together we can forge ahead and make a greater future a reality.</p>
                       <p className="card-text"><small className="text-muted text-white">Don't doubt yourself before you even begin.</small></p>
                     </div>
                   </div>

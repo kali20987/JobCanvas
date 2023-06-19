@@ -59,13 +59,7 @@ const JobForm = () => {
     const salaryInput = `${jobInfo.salary}`
     const newParagraph = `${company}\n${locationInput}\n${titleInput}\n${descriptionInput}\n${positionInput}\n${salaryInput}`;
     setParagraph([...paragraph, newParagraph]);
-    // setParagraph ([...paragraph, 
-    //     company+\n, 
-    //     locationInput, 
-    //     titleInput, 
-    //     descriptionInput, 
-    //     positionInput, 
-    //     salaryInput])
+  
 }
 
     

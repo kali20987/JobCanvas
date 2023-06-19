@@ -1,12 +1,15 @@
 .container-submain {
     text-align: center;
-    background-image: url('../images/background_720.jpg');
+ 
 }
 .jc1 {
     color: rgb(104, 99, 241);
     text-align: center;
     
 }
-.card-3 {
-    background-color: rgb(104, 99, 241);
+
+.card-3 img {
+    height: 400px;
+    width: 600px;
+
 }

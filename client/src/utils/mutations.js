@@ -27,7 +27,7 @@ export const ADD_JOB = gql`
   }
 `;
 
-//MADISON
+
 export const ADD_USER = gql`
 mutation addUser($firstName: String, $lastName: String, $gender: String, $email: String, $password: String) {
   addUser(firstName: $firstName, lastName: $lastName, gender: $gender, email: $email, password: $password) {

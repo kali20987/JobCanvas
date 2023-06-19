@@ -28,7 +28,7 @@ export default function SearchBox() {
     const data = await fetch(
       `https://api.adzuna.com/v1/api/jobs/us/search/1?app_id=${API_ID}&app_key=${API_KEY}&results_per_page=20&title_only=${searchInput}`
     );
-    //     https://api.adzuna.com/v1/api/jobs/gb/search/1?app_id={YOUR_APP_ID}&app_key={YOUR_APP_KEY}
+    
 
 
 
