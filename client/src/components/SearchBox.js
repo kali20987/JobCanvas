@@ -21,8 +21,8 @@ export default function SearchBox() {
   const [searchInput, setSearchInput] = useState('');
   const [jobData, setJobData] = useState([]);
 
-  const API_ID = process.env.REACT_APP_API_ID;
-  const API_KEY = process.env.REACT_APP_API_KEY;
+  const API_ID = '9c19e01b';
+  const API_KEY = '23a78db7bd3b02d0557a067cf16e5f1e';
 
   async function jobSearch() {
     const data = await fetch(
