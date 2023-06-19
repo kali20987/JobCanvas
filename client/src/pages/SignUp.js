@@ -46,7 +46,7 @@ const SignUp = () => {
   };
 
   return (
-    <main className="row g-3 align-items-center">
+    <main className=" signup-page row g-3 align-items-center">
       <h1>SignUp Page</h1>
       <form onSubmit={handleFormSubmit}>
         {/* First Name */}
@@ -86,7 +86,7 @@ const SignUp = () => {
           </label>
           <select
             type="list"
-            className="form-select"
+            className="form-control"
             id="inputGender"
             name="gender"
             value={formState.gender}
