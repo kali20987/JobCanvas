@@ -129,10 +129,8 @@ dist
 .yarn/install-state.gz
 .pnp.*
 
-
-
-
-
+# api key
+.env
 
 
 
