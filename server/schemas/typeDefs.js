@@ -34,6 +34,10 @@ type Mutation {
     addUser(firstName: String, lastName: String, gender: String, email: String, password: String): Auth
     addJob(companyName: String, location: String, jobTitle: String,  description: String, position: String, salary: String,
      ): Job
+    updateJob(_id: ID, companyName: String!, location: String!, jobTitle: String!, description: String!, position: String, salary: String): Job
+    removeJob(_id: ID): Job
+    removeUser(_id: ID): User
+    updateUser(_id: ID, firstName: String!, lastName: String!, gender: String, email: String!, password: String!): User
 
 }
 `
