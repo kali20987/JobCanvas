@@ -7,6 +7,7 @@ import together from '../images/together.jpeg';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import SearchBox from '../components/SearchBox';
 import '../styles/Home.css';
+import groupPhoto from '../images/group_720.jpg';
 
 export default function Home() {
 
@@ -33,7 +34,7 @@ export default function Home() {
                         <h4 className="card-title">Strategy &amp; Planning</h4>
                         <h6 className="card-subtitle">Put a plan in place</h6>
                       </div>
-                      <img src={planChalkboard} alt="A chalkboard." />
+                      <img src={groupPhoto} alt="A chalkboard." />
                       <div className="card-block">
                         <p className="card-text">Start with a rough draft and refine it with time.</p>
 

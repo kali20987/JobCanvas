@@ -4,6 +4,7 @@ import { useState } from 'react';
 import { useMutation, useQuery } from '@apollo/client';
 import { ADD_JOB } from '../utils/mutations';
 import { QUERY_VIEWJOBS } from '../utils/queries';
+import '../styles/JobPosting.css'
 
 const JobForm = () => {
 
@@ -73,7 +74,7 @@ const [companyName, location, jobTitle, description, position, salary ] = useSta
 
     return (
         <section className="container">
-            <div className="row bg-orange-200">
+            <div className="jobposting row bg-orange-200">
             <form onSubmit={handleFormSubmit}>
             <div className="grid gap-6 mb-6 md:grid-cols-2">
                 <div>
