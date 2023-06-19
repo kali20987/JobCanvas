@@ -16,13 +16,13 @@ export default function Home() {
    
     <SearchBox />
 
-      <div className="container-submmain p-3">
-        <h1>JobCanvas</h1>
+      <div className="container-submain p-3">
+        <h1 className='jc1'>JobCanvas</h1>
 
         <section className="section1">
           <div className="section-content">
             <div className="container">
-              <h5>What we are all about</h5>
+              <h5>It's all up from here</h5>
               <p className="lead" >JobCanvas is the new age way to look for the ideal job! Come experince a better way to find a better future!</p>
 
               <div className="row">
@@ -89,28 +89,28 @@ export default function Home() {
 
 
                 <div className="card-columns">
-                  <div className="card bg-secondary">
+                  <div className="card-3">
                     <img className="card-img-top" src={typeLaptop} alt="Typing on laptop." />
                     <div className="card-body">
-                      <h4 className="card-title">Committed</h4>
-                      <p className="card-text">We want to be just as committed as you are to starting a beautiful future.</p>
+                      <h4 className="card-title text-white">Committed</h4>
+                      <p className="card-text text-white">We want to be just as committed as you are in starting a beautiful future.</p>
                     </div>
                   </div>
-                  <div className="card p-3">
+                  {/* <div className="card p-3">
                     <div className="card-body">
                       <h4 className="card-title">Card title</h4>
                       <p className="card-text">We can delete these extra cards if we dont need them. </p>
 
                     </div>
-                  </div>
+                  </div> */}
 
 
-                  <div className="card-columns bg-secondary">
-                    <img className="img-fluid img-thumbnail" src={together} alt="Typing on laptop." />
+                  <div className="card-columns bg-warning">
+                    <img className="img-fluid img-thumbnail" src={together} alt="Hands together in circle." />
                     <div className="card-body">
-                      <h4 className="card-title">TOGETHER</h4>
-                      <p className="card-text">Put some additional text here</p>
-                      <p className="card-text"><small className="text-muted">Muted text for whatever purpose</small></p>
+                      <h4 className="card-title text-white">TOGETHER</h4>
+                      <p className="card-text text-white">Together we can forge ahead and make a greater future a reality.</p>
+                      <p className="card-text"><small className="text-muted text-white">Don't doubt yourself before you even begin.</small></p>
                     </div>
                   </div>
                 </div>
