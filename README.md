@@ -10,13 +10,13 @@
 A job board website which allows users to search for jobs locally and also post job listings. Each returned job search result is accompanied by a link to the original job posting which the user should follow if they'd like to apply.
 
 
-Each posted job listing is saved to a MongoDB database along with each user who signsup.
+Each posted job listing is saved to a MongoDB database along with each user who signs up.
 
 
 <img width="1400" alt="Screenshot 2023-07-01 at 9 22 29 AM" src="https://github.com/kali20987/Khadijah-Portfolio/assets/128011155/3e234b4f-ef30-4dc4-aa6b-116cbffd0ba1">
 
 
-# Usage
+# Installation
 
 
 * Deployed [link](https://job-canvas-p3-97b7c0744928.herokuapp.com/)
@@ -35,6 +35,5 @@ Each posted job listing is saved to a MongoDB database along with each user who 
 
 
 # License
-The MIT License
-(https://opensource.org/licenses/MIT)
+[The MIT License](https://opensource.org/licenses/MIT)
 
