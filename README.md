@@ -34,7 +34,8 @@ Each posted job listing is saved to a MongoDB database along with each user who 
 * [mwalker23](https://github.com/mwalker23)
 * [Daisha22d](https://github.com/Daisha22d)
 
-
-# License
+## Credits
+[Adzuna API](https://developer.adzuna.com/)
+## License
 [The MIT License](https://opensource.org/licenses/MIT)
 
