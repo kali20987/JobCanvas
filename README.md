@@ -17,8 +17,9 @@ Each posted job listing is saved to a MongoDB database along with each user who 
 
 
 ## Usage
+Deployed [link](https://job-canvas-p3-97b7c0744928.herokuapp.com/)
 
-
+## Installation
 * After you've cloned the repo, run ``npm i`` in the client and server folders, and in the root level of the project.
 * Run ``node server.js`` in the server folder.
 
