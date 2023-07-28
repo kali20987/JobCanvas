@@ -21,7 +21,9 @@ Deployed [link](https://job-canvas-p3-97b7c0744928.herokuapp.com/)
 
 ## Installation
 * After you've cloned the repo, run ``npm i`` in the client and server folders, and in the root level of the project.
-* Run ``node server.js`` in the server folder.
+* Run ``npm run start`` in the root level.
+* Then run ``npm run develop`` in the root level.
+* It should start and run on your localhost:3000
 
 
 
